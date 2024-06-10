@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+#cursor {
+    display: inline-block;
+    opacity: 1;
+    margin-left: -8px;
+}
+
+@keyframes fadeBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#blink {
+    animation: fadeBlink 1s infinite;
+}
