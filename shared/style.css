@@ -126,3 +126,9 @@ li::before{
     opacity: 1;
     margin-left: -8px;
 }
+
+#egg{
+text-decoration: none;
+color: #81899c;
+cursor:text;
+}
