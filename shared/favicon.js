@@ -1,9 +1,9 @@
 function updateFavicon(theme) {
         const favicon = document.getElementById('favicon');
         if (theme === 'dark') {
-            favicon.href = 'crossed-ok-icon_white.webp';
+            favicon.href = 'https://no-ok.xyz/shared/crossed-ok-icon_white.webp';
         } else {
-            favicon.href = 'crossed-ok-icon_black.webp';
+            favicon.href = 'https://no-ok.xyz/shared/crossed-ok-icon_black.webp';
         }
     }
 
