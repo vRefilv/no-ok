@@ -19,4 +19,5 @@ Based on https://nohello.net/
 ### Translations
 
 We translated our website ourselves.
+
 It is possible that someday I will add more languages, but for now the website supports Polish and English.
