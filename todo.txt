@@ -1,0 +1,1 @@
+fade-in on scroll and wait 1000 2000 3000 for each element in the same viev
