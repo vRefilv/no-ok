@@ -311,3 +311,12 @@ cursor:text;
         font-size: 32px;
     }
 }
+
+.fade-element {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}

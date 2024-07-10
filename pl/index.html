@@ -13,16 +13,18 @@
     <script src="../shared/animation.js"></script>
     <script src="../shared/favicon.js"></script>
     <script src="../shared/examples.js"></script>
+    <script src="../shared/jquery-3.7.1.min.js"></script>
+    <script src="../shared/fade.js"></script>
     <link rel="stylesheet" href="../shared/style.css">
 </head>
 <body>
     <header>
-        <h1 class="title">no <span class="strike" id="text"></span><span id="cursor"></span></h1>
-        <h3 class="subtitle">przestań pisać <a id="egg" href="../ok">ok</a></h3>
-        <h2 class="lead">To tak jakby nie interesowało cię co ktoś pisze.</h2>
+        <h1 class="title fade-element">no <span class="strike" id="text"></span><span id="cursor"></span></h1>
+        <h3 class="subtitle fade-element">przestań pisać <a id="egg" href="../ok">ok</a></h3>
+        <h2 class="lead fade-element">To tak jakby nie interesowało cię co ktoś pisze.</h2>
     </header>
 
-    <div class="examples-container">
+    <div class="examples-container fade-element">
         <div class="example">
             <h2>❌ Nie rób tego</h2>
             <div class="dontdothis">
@@ -42,7 +44,7 @@
         </div>
     </div>
         
-    <div class="examples2">
+    <div class="examples2 fade-element">
         <div class="examples">
             <p>Jeśli nie znasz żadnego innego słowa niż ok</p>
             Tu jest kilka przykładów:
@@ -56,7 +58,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer fade-element>
         Jeśli widzisz link do tej strony jako kogoś status/bio, albo ktoś wysłał ci ten link
         bądz przygotowany na to że ta osoba będzie zirytowana jeśli napiszesz jej "ok"
         <br/>
