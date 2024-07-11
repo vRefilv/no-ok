@@ -4,7 +4,7 @@ $('.example').plate({
     maxRotation: 5,
     animationDuration: 200
 });
-$('.examples2').plate({
+$('.examples').plate({
     perspective: 250,
     maxRotation: 5,
     animationDuration: 200
