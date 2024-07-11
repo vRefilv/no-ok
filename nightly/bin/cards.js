@@ -1,3 +1,4 @@
+if ($(window).width() > 600) {
 $('.example').plate({
     perspective: 125,
     maxRotation: 5,
@@ -13,3 +14,4 @@ $('footer').plate({
     maxRotation: 5,
     animationDuration: 200
 });
+}

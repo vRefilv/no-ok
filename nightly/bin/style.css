@@ -1,10 +1,48 @@
-body{
+:root {
+    /* Light theme colors */
+    --background-color: white;
+    --div-color: white;
+    --text-color: black;
+    --avatar-border-color: wheat;
+    --avatar-bg-color: wheat;
+    --avatar2-border-color: lightblue;
+    --avatar2-bg-color: lightblue;
+    --shadow-color: #d9d9d9;
+    --link-color: magenta;
+    --subtitle-color: #81899c;
+    --list-color: #AFAFAF;
+    --strike-color: red;
+    --list-check-color: green;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark theme colors */
+        --background-color: hsl(226, 23%, 11%);
+        --div-color: hsl(226, 23%, 14%);
+        --text-color: #c5c5c5;
+        --avatar-border-color: wheat;
+        --avatar-bg-color: wheat;
+        --avatar2-border-color: lightblue;
+        --avatar2-bg-color: lightblue;
+        --shadow-color: #000000;
+        --link-color: magenta;
+        --subtitle-color: #81899c;
+        --list-color: #AFAFAF;
+        --strike-color: red;
+        --list-check-color: green;
+    }
+}
+
+body {
     margin: 0;
     padding: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     justify-content: center;
     overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .examples-container {
@@ -23,16 +61,16 @@ body{
 
 .dontdothis, .trythis {
     font-size: 24px;
-    background-color: #ffffff;
+    background-color: var(--div-color);
     border-radius: 10px;
-    box-shadow: -20px 20px 60px#d9d9d9;
+    box-shadow: -20px 20px 60px var(--shadow-color);
     width: 400px;
     height: auto;
     padding: 10px;
     margin-top: 10px;
 }
 
-.avatar, .avatar2{
+.avatar, .avatar2 {
     border: 1px solid;
     width: 60px;
     height: 60px;
@@ -42,13 +80,13 @@ body{
 }
 
 .avatar {
-    border-color: wheat;
-    background-color: wheat;
+    border-color: var(--avatar-border-color);
+    background-color: var(--avatar-bg-color);
 }
 
 .avatar2 {
-    border-color: lightblue;
-    background-color: lightblue;
+    border-color: var(--avatar2-border-color);
+    background-color: var(--avatar2-bg-color);
 }
 
 .bold {
@@ -61,11 +99,12 @@ body{
     width: 838px;
     text-align: left;
     font-size: 20px;
-    box-shadow: -20px 20px 60px#d9d9d9;
+    box-shadow: -20px 20px 60px var(--shadow-color);
+    background-color: var(--div-color);
 }
 
 footer {
-    box-shadow: -20px 20px 60px#d9d9d9;
+    box-shadow: -20px 20px 60px var(--shadow-color);
     overflow: hidden;
     bottom: 0;
     width: 838px;
@@ -74,51 +113,52 @@ footer {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--div-color);
 }
 
-footer a{
-    color:magenta;
+footer a {
+    color: var(--link-color);
 }
 
-.examples2{
+.examples2 {
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.title{
+.title {
     font-size: 64px;
 }
 
-.subtitle{
-    color: #81899c;
+.subtitle {
+    color: var(--subtitle-color);
     font-size: 24px;
     font-weight: 300;
     margin-top: -50px;
 }
 
-li{
+li {
     list-style-type: none;
-    color: #AFAFAF;
+    color: var(--list-color);
 }
 
-li::before{
+li::before {
     content: '✓';
     padding-right: 10px;
-    color: green;
+    color: var(--list-check-color);
     font-weight: 900;
     font-size: 13px;
 }
 
-.lead{
+.lead {
     font-weight: 300;
     font-size: 45px;
 }
 
-.strike{
-    text-decoration:line-through;
-    text-decoration-color:red;
+.strike {
+    text-decoration: line-through;
+    text-decoration-color: var(--strike-color);
     text-decoration-thickness: 10px;
 }
 
@@ -128,24 +168,15 @@ li::before{
     margin-left: -8px;
 }
 
-#egg{
-text-decoration: none;
-color: #81899c;
-cursor:text;
+#egg {
+    text-decoration: none;
+    color: var(--subtitle-color);
+    cursor: text;
 }
-
-
-
-
-
-
-
-
-
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-        /* Add a global box-sizing rule */
+    /* Add a global box-sizing rule */
     * {
         box-sizing: border-box;
     }
@@ -177,9 +208,9 @@ cursor:text;
 
     .dontdothis, .trythis {
         font-size: 24px;
-        background-color: #ffffff;
+        background-color: var(--div-color);
         border-radius: 10px;
-        box-shadow: -20px 20px 60px #d9d9d9;
+        box-shadow: -20px 20px 60px var(--shadow-color);
         width: 100%; /* Set width to 100% of the parent container */
         max-width: 400px; /* Ensure it doesn't exceed 400px */
         height: auto;
@@ -197,13 +228,13 @@ cursor:text;
     }
 
     .avatar {
-        border-color: wheat;
-        background-color: wheat;
+        border-color: var(--avatar-border-color);
+        background-color: var(--avatar-bg-color);
     }
 
     .avatar2 {
-        border-color: lightblue;
-        background-color: lightblue;
+        border-color: var(--avatar2-border-color);
+        background-color: var(--avatar2-bg-color);
     }
 
     .bold {
@@ -217,21 +248,23 @@ cursor:text;
         max-width: 838px; /* Ensure it doesn't exceed 838px */
         text-align: left;
         font-size: 20px;
-        box-shadow: -20px 20px 60px #d9d9d9;
+        box-shadow: -20px 20px 60px var(--shadow-color);
+        background-color: var(--div-color);
     }
 
     footer {
-        box-shadow: -20px 20px 60px #d9d9d9;
+        box-shadow: -20px 20px 60px var(--shadow-color);
         overflow: hidden;
         bottom: 0;
         width: 100%;
         text-align: center;
         padding: 40px;
         margin-top: 100px;
+        background-color: var(--div-color);
     }
 
     footer a {
-        color: magenta;
+        color: var(--link-color);
     }
 
     .examples2 {
@@ -246,7 +279,7 @@ cursor:text;
     }
 
     .subtitle {
-        color: #81899c;
+        color: var(--subtitle-color);
         font-size: 24px;
         font-weight: 300;
         margin-top: -50px;
@@ -254,13 +287,13 @@ cursor:text;
 
     li {
         list-style-type: none;
-        color: #AFAFAF;
+        color: var(--list-color);
     }
 
     li::before {
         content: '✓';
         padding-right: 10px;
-        color: green;
+        color: var(--list-check-color);
         font-weight: 900;
         font-size: 13px;
     }
@@ -272,7 +305,7 @@ cursor:text;
 
     .strike {
         text-decoration: line-through;
-        text-decoration-color: red;
+        text-decoration-color: var(--strike-color);
         text-decoration-thickness: 10px;
     }
 
@@ -284,10 +317,10 @@ cursor:text;
 
     #egg {
         text-decoration: none;
-        color: #81899c;
+        color: var(--subtitle-color);
         cursor: text;
     }
-    
+
     .dontdothis, .trythis {
         width: 100%;
         max-width: 100%;
@@ -320,4 +353,3 @@ cursor:text;
 .visible {
     opacity: 1;
 }
-
