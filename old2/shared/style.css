@@ -1,48 +1,10 @@
-:root {
-    /* Light theme colors */
-    --background-color: white;
-    --div-color: white;
-    --text-color: black;
-    --avatar-border-color: wheat;
-    --avatar-bg-color: wheat;
-    --avatar2-border-color: lightblue;
-    --avatar2-bg-color: lightblue;
-    --shadow-color: #d9d9d9;
-    --link-color: magenta;
-    --subtitle-color: #81899c;
-    --list-color: #AFAFAF;
-    --strike-color: red;
-    --list-check-color: green;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Dark theme colors */
-        --background-color: hsl(226, 23%, 11%);
-        --div-color: hsl(226, 23%, 14%);
-        --text-color: #c5c5c5;
-        --avatar-border-color: wheat;
-        --avatar-bg-color: wheat;
-        --avatar2-border-color: lightblue;
-        --avatar2-bg-color: lightblue;
-        --shadow-color: #000000;
-        --link-color: magenta;
-        --subtitle-color: #81899c;
-        --list-color: #AFAFAF;
-        --strike-color: red;
-        --list-check-color: green;
-    }
-}
-
-body {
+body{
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     justify-content: center;
     overflow-x: hidden;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
 .examples-container {
@@ -61,16 +23,16 @@ body {
 
 .dontdothis, .trythis {
     font-size: 24px;
-    background-color: var(--div-color);
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: -20px 20px 60px var(--shadow-color);
+    box-shadow: -20px 20px 60px#d9d9d9;
     width: 400px;
     height: auto;
     padding: 10px;
     margin-top: 10px;
 }
 
-.avatar, .avatar2 {
+.avatar, .avatar2{
     border: 1px solid;
     width: 60px;
     height: 60px;
@@ -80,13 +42,13 @@ body {
 }
 
 .avatar {
-    border-color: var(--avatar-border-color);
-    background-color: var(--avatar-bg-color);
+    border-color: wheat;
+    background-color: wheat;
 }
 
 .avatar2 {
-    border-color: var(--avatar2-border-color);
-    background-color: var(--avatar2-bg-color);
+    border-color: lightblue;
+    background-color: lightblue;
 }
 
 .bold {
@@ -99,12 +61,11 @@ body {
     width: 838px;
     text-align: left;
     font-size: 20px;
-    box-shadow: -20px 20px 60px var(--shadow-color);
-    background-color: var(--div-color);
+    box-shadow: -20px 20px 60px#d9d9d9;
 }
 
 footer {
-    box-shadow: -20px 20px 60px var(--shadow-color);
+    box-shadow: -20px 20px 60px#d9d9d9;
     overflow: hidden;
     bottom: 0;
     width: 838px;
@@ -113,52 +74,51 @@ footer {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--div-color);
 }
 
-footer a {
-    color: var(--link-color);
+footer a{
+    color:magenta;
 }
 
-.examples2 {
+.examples2{
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.title {
+.title{
     font-size: 64px;
 }
 
-.subtitle {
-    color: var(--subtitle-color);
+.subtitle{
+    color: #81899c;
     font-size: 24px;
     font-weight: 300;
     margin-top: -50px;
 }
 
-li {
+li{
     list-style-type: none;
-    color: var(--list-color);
+    color: #AFAFAF;
 }
 
-li::before {
+li::before{
     content: '✓';
     padding-right: 10px;
-    color: var(--list-check-color);
+    color: green;
     font-weight: 900;
     font-size: 13px;
 }
 
-.lead {
+.lead{
     font-weight: 300;
     font-size: 45px;
 }
 
-.strike {
-    text-decoration: line-through;
-    text-decoration-color: var(--strike-color);
+.strike{
+    text-decoration:line-through;
+    text-decoration-color:red;
     text-decoration-thickness: 10px;
 }
 
@@ -168,15 +128,24 @@ li::before {
     margin-left: -8px;
 }
 
-#egg {
-    text-decoration: none;
-    color: var(--subtitle-color);
-    cursor: text;
+#egg{
+text-decoration: none;
+color: #81899c;
+cursor:text;
 }
+
+
+
+
+
+
+
+
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    /* Add a global box-sizing rule */
+        /* Add a global box-sizing rule */
     * {
         box-sizing: border-box;
     }
@@ -208,9 +177,9 @@ li::before {
 
     .dontdothis, .trythis {
         font-size: 24px;
-        background-color: var(--div-color);
+        background-color: #ffffff;
         border-radius: 10px;
-        box-shadow: -20px 20px 60px var(--shadow-color);
+        box-shadow: -20px 20px 60px #d9d9d9;
         width: 100%; /* Set width to 100% of the parent container */
         max-width: 400px; /* Ensure it doesn't exceed 400px */
         height: auto;
@@ -228,13 +197,13 @@ li::before {
     }
 
     .avatar {
-        border-color: var(--avatar-border-color);
-        background-color: var(--avatar-bg-color);
+        border-color: wheat;
+        background-color: wheat;
     }
 
     .avatar2 {
-        border-color: var(--avatar2-border-color);
-        background-color: var(--avatar2-bg-color);
+        border-color: lightblue;
+        background-color: lightblue;
     }
 
     .bold {
@@ -248,23 +217,21 @@ li::before {
         max-width: 838px; /* Ensure it doesn't exceed 838px */
         text-align: left;
         font-size: 20px;
-        box-shadow: -20px 20px 60px var(--shadow-color);
-        background-color: var(--div-color);
+        box-shadow: -20px 20px 60px #d9d9d9;
     }
 
     footer {
-        box-shadow: -20px 20px 60px var(--shadow-color);
+        box-shadow: -20px 20px 60px #d9d9d9;
         overflow: hidden;
         bottom: 0;
         width: 100%;
         text-align: center;
         padding: 40px;
         margin-top: 100px;
-        background-color: var(--div-color);
     }
 
     footer a {
-        color: var(--link-color);
+        color: magenta;
     }
 
     .examples2 {
@@ -279,7 +246,7 @@ li::before {
     }
 
     .subtitle {
-        color: var(--subtitle-color);
+        color: #81899c;
         font-size: 24px;
         font-weight: 300;
         margin-top: -50px;
@@ -287,13 +254,13 @@ li::before {
 
     li {
         list-style-type: none;
-        color: var(--list-color);
+        color: #AFAFAF;
     }
 
     li::before {
         content: '✓';
         padding-right: 10px;
-        color: var(--list-check-color);
+        color: green;
         font-weight: 900;
         font-size: 13px;
     }
@@ -305,7 +272,7 @@ li::before {
 
     .strike {
         text-decoration: line-through;
-        text-decoration-color: var(--strike-color);
+        text-decoration-color: red;
         text-decoration-thickness: 10px;
     }
 
@@ -317,10 +284,10 @@ li::before {
 
     #egg {
         text-decoration: none;
-        color: var(--subtitle-color);
+        color: #81899c;
         cursor: text;
     }
-
+    
     .dontdothis, .trythis {
         width: 100%;
         max-width: 100%;
@@ -353,3 +320,4 @@ li::before {
 .visible {
     opacity: 1;
 }
+
