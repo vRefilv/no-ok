@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="test.js"></script>
+    <title>Uciekający Przycisk</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #uciekajacyPrzycisk {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button id="uciekajacyPrzycisk">Kliknij mnie!</button>
+
+    <script>
+        const button = document.getElementById('uciekajacyPrzycisk');
+
+        const moveButton = () => {
+            // Losowanie liczby od 1 do 100
+            const chance = Math.random() * 100;
+
+            // Jeśli liczba jest większa niż 1, przycisk ucieka
+            if (chance > 1) {
+                const randomX = Math.random() * (window.innerWidth - button.clientWidth);
+                const randomY = Math.random() * (window.innerHeight - button.clientHeight);
+
+                // Przesunięcie przycisku na nowe miejsce
+                button.style.left = `${randomX}px`;
+                button.style.top = `${randomY}px`;
+            } else {
+                // Szansa 1 na 100 - przycisk nie ucieka i można go kliknąć
+                console.log('Masz szczęście! Przycisk nie uciekł.');
+                button.removeEventListener('mouseover', moveButton); // Usunięcie event listenera
+            }
+        };
+
+        button.addEventListener('mouseover', moveButton);
+    </script>
+</body>
+</html>
